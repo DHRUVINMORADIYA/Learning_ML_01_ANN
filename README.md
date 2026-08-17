@@ -37,6 +37,22 @@ there will be 10 weights in total which can be presented with 5x2 matrix W.
 
 let's say input matrix 2x1 is called X, so weighted sum can be simply calculated with W @ X. Also note how 2 input values were moved forward and converted into 5 values.
 
-
 If input vector was a matrix rather than a vector, we can say we are doing the same process for multiple input sets and process follows the same way.
 
+### Full-batch processing & mini-batch processing & stochastic gradient descent
+
+Given that training data count is in thousands or millions, there comes different ways we can feed them to models. Off course not all ways are practical and advisable due to both accuracy and computational reasons.
+
+First way is to feed all training data together, get average of squared error loss and pass the loss using below 2 options:
+1. If it is linear regression model, there is a formula (Analytic Solution) derived out of differantion of squared error loss function. Very quick and easy - it will give the best possible updated values for weights and biases. However it only works with linear models where there are no activation functions.
+2. Now let's say ours is non-linear. In that case we use gradient descent. Same way as loss, we can get average gradient value of all data points and move accordingly. This one doesn't seem practical off course.
+
+Let's think opposite and run this cycle separately for each data. 
+1. Here if given a chance and we try using analytic solution, we would wipe wipe out word done in previous cycle and overwrite it with best possible tuning for current cycle. Not good.
+2. We can however do gradient descent. We are saying let's move slightly each time in a direction which would take us close to bottom of n-dimensional graph of loss vs all parameters. Here drawback is (1) we become too much sensitive and be bothered by "noise" data (imagine data falling on edges of gaussian distribution). (2) takes high CPU.
+
+Practical and I suppose the industry practice should be somewhere in between above two - do it in batches.
+1. Doesn't make sense to use analytic solution (if we are lucky to have linear regression), as each batch run will basically wipe out work done by previous one.
+2. We use gradient descent here. We take average of loss as well as of gradient, use learning rate to define step sizes we take and move slightly with each run. This one feels the best.
+
+So, mini-batch runs with gradient descent method it is!
