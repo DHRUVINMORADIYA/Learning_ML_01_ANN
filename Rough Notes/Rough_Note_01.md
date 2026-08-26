@@ -21,7 +21,7 @@ To represent and calculate billions of values, metrices come handy for its conve
 
 Matrix multiplication steps are not that hard, however understanding them from core is a bit tricky. Here is my idea of it:
 
-B = A @ X where Band A are metrices and X is an input vector; @ is multiplication.
+B = A @ X where B and A are metrices and X is an input vector; @ is multiplication.
 
 In this example, A works as an actor and X is a subject. A will transform X into B.
 
@@ -48,7 +48,7 @@ First way is to feed all training data together, get average of squared error lo
 2. Now let's say ours is non-linear. In that case we use gradient descent. Same way as loss, we can get average gradient value of all data points and move accordingly. This one doesn't seem practical off course.
 
 Let's think opposite and run this cycle separately for each data. 
-1. Here if given a chance and we try using analytic solution, we would wipe wipe out word done in previous cycle and overwrite it with best possible tuning for current cycle. Not good.
+1. Here if given a chance and we try using analytic solution, we would wipe out word done in previous cycle and overwrite it with best possible tuning for current cycle. Not good.
 2. We can however do gradient descent. We are saying let's move slightly each time in a direction which would take us close to bottom of n-dimensional graph of loss vs all parameters. Here drawback is (1) we become too much sensitive and be bothered by "noise" data (imagine data falling on edges of gaussian distribution). (2) takes high CPU.
 
 Practical and I suppose the industry practice should be somewhere in between above two - do it in batches.
