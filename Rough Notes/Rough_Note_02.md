@@ -97,3 +97,18 @@ next we saw its implementation in python.
 - We saw code that did above things. This is nearest to implementing a linear regression by hand. However in real life, we might not go this deep into logic. we have libraries with all boiler plate code with best efficiency. [I will have to write and run a code for the same by myself.]
 
 Next we did the same but here with the use of pre written libraries. code is really compressed into few lines in real life. but I feel investing time to understand inner architecture might prove out to fruitful in future. [I will have to write and run a code for the same by myself.]
+
+3.6 Generalization
+- we don't want underfitting or overfitting. techniques used to do better generalization is called Regularization.
+- We make an assumption called IID - independent(does not affect each other) and identically distributed data(taked from same market or environment)
+- We want model to find general patterns; we don't want it to answer perfectly on each training data.
+- connection with concept of Karl Popper - we would rather get proved wrong while predicting some important specific detail rather than get proved right with some general info.
+- if training error is high, there is a scope in improving model.
+- if training error is small and test data error is big, it indicates overfitting. it is not always bad; it is normal. but if it is not as expected, we need to train better - with more and diverse data.
+
+- polynomial curve fitting - interesting! It is extension to normal linear functions where we can fit the data a level up as we can curve the line
+
+- model selection - model complexity should go hand in hand with size of data.
+- data should be divided  in 3 parts - train, validation(more like intermediate training+tuning step before we send it for final testing), test
+- K-fold cross validation - when data is limited and we have to make a choice on decisions, use this to make the most of all limited data. we split data in smaller portions and do training + validation loop multiple times while changing turns each time on who to become validation data. It is pre-training step to try out models, not the real training.
+
