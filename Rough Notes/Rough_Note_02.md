@@ -112,3 +112,18 @@ Next we did the same but here with the use of pre written libraries. code is rea
 - data should be divided  in 3 parts - train, validation(more like intermediate training+tuning step before we send it for final testing), test
 - K-fold cross validation - when data is limited and we have to make a choice on decisions, use this to make the most of all limited data. we split data in smaller portions and do training + validation loop multiple times while changing turns each time on who to become validation data. It is pre-training step to try out models, not the real training.
 
+3.7 Weight Decay
+- It is about penalising high weights and process of grounding them.
+penalty is 1/2 * (w1**2 + w2**2 + ... + wn**2) ; which later comes down to (learning rate * penalty rate lambda * wi) that we deduct from existing weight. We do not apply this on bias.
+
+Regularization techniques
+
+L1 Regularization: penalty is 1/2 * (w1 + w2 + ... + wn); so gradient becomes -1 or +1. With this method there is a chance we will push weights to zero.
+
+L2 Regularization: It is same as mentioned earlier with squared sum. here as penalty has dependency on w, we will shrink weights smaller but not make it zero.
+
+saw 'from scratch' and concise implementations of weight decay.
+We are adding additional part when we calculating the loss to penalize higher weights.
+With this we increase training loss while reducing generalization(validation) loss.
+
+that's the end of chapter 3

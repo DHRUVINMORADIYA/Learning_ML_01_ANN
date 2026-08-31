@@ -1,5 +1,4 @@
 import math
-import random
 
 def sigmoid(x):
     """Squashes any number into the range (0, 1) - lets the network output a probability."""
