@@ -1,7 +1,5 @@
-"""Linear regression from scratch: 2 inputs -> 1 output, with L2 weight decay.
-
-Inner logic (forward pass, MSE, gradients, SGD update, regularization) is
-written by hand. NumPy is used only for array math, matplotlib only for plots.
+"""
+forward pass, MSE, gradients, SGD update, regularization
 """
 
 import numpy as np
@@ -110,7 +108,6 @@ def plot_runs(runs, data):
     ax_norm.set(title="Weight size after training", ylabel="||w||^2")
 
     plt.tight_layout()
-    plt.savefig("From_Scratch_loss.png", dpi=110)
     plt.show()
 
 
