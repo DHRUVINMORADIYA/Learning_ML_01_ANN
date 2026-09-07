@@ -1,28 +1,56 @@
-# Permanent Notes — Index
+# Permanent Notes · Index
 
-## Topics
+## Path
 
-Distilled notes and the code written for each.
-
-### Linear Neural Network for Regression
-
-- [Notes](Linear%20Neural%20Network%20for%20Regression/Notes.md)
-- Code:
-  - [L1_From_Scratch.py](Linear%20Neural%20Network%20for%20Regression/L1_From_Scratch.py) — no libraries, gradients by hand
-  - [L2_PyTorch.py](Linear%20Neural%20Network%20for%20Regression/L2_PyTorch.py) — autograd + `nn` + `optim`, own training loop
-  - [L3_High_Level.py](Linear%20Neural%20Network%20for%20Regression/L3_High_Level.py) — Keras `.fit()`
+1. **[00 · Basics](00%20Basics/Notes.md)**: from "why learn from data" to how a
+   network learns. The four components, neuron to network, loss, gradient descent,
+   matrices, autograd, batching.
+2. **[01 · Linear Neural Network for Regression](01%20Linear%20Neural%20Network%20for%20Regression/Notes.md)**:
+   the first model end to end, built at three levels of abstraction; generalization
+   and weight decay.
 
 ## Concepts
 
-Core ideas I unlocked, kept at a broad level here and cited from the topic notes.
+Core ideas kept at a broad level here and cited from the topic notes.
 
 ### Levels of abstraction
 
-When working with a model there are four layers of abstraction, from most manual to most hands-off. Each step hands one more responsibility to a library.
+When working with a model there are four layers of abstraction, from most manual to
+most hands-off. Each step hands one more responsibility to a library.
 
-1. **Mathematical layer** — linear algebra, activation functions, loss functions, calculus. Gradients are derived by hand (chain rule).
-2. **From scratch** — the derived formulas are taken as given and applied (e.g. plugging into the gradient expression). Still no framework.
-3. **Framework, control kept** — a library (PyTorch, TensorFlow) computes gradients via autograd. How much to hand over is a choice: raw autograd (own parameter creation and updates) or `nn` + `optim` (library does those) while still writing the training loop.
-4. **High level** — a framework (Keras, Lightning, fastai) runs everything, including the loop. Only data and parameters are configured.
+1. **Mathematical layer**: linear algebra, activation functions, loss functions,
+   calculus. Gradients are derived by hand (chain rule).
+2. **From scratch**: the derived formulas are taken as given and applied (e.g.
+   plugging into the gradient expression). Still no framework.
+3. **Framework, control kept**: a library (PyTorch, TensorFlow) computes gradients
+   via autograd. How much to hand over is a choice: raw autograd (own parameter
+   creation and updates) or `nn` + `optim` (library does those) while still writing
+   the training loop.
+4. **High level**: a framework (Keras, Lightning, fastai) runs everything,
+   including the loop. Only data and parameters are configured.
 
-Cited by: [Linear Neural Network for Regression](Linear%20Neural%20Network%20for%20Regression/Notes.md)
+Cited by: [01 · Linear Neural Network for Regression](01%20Linear%20Neural%20Network%20for%20Regression/Notes.md)
+
+### Four components of a learning system
+
+Any supervised-learning setup decomposes into four parts, and most questions are
+really about just one of them:
+
+1. **Data**: training, validation, test sets.
+2. **Model**: the function mapping input to prediction.
+3. **Objective (loss) function**: a single number for how wrong a prediction is.
+4. **Optimization algorithm**: the rule that updates the model's parameters.
+
+Cited by: [00 · Basics](00%20Basics/Notes.md)
+
+### Feeding data: full-batch / stochastic / mini-batch
+
+How many examples go into one parameter update, a precision vs cost trade-off.
+
+- **Full-batch**: all data per update; accurate but expensive. Linear models with
+  no activation also admit a closed-form analytic solution.
+- **Stochastic**: one example per update; cheap, noisy, outlier-sensitive.
+- **Mini-batch**: a handful per update; averages out noise, fits in memory. The
+  default.
+
+Cited by: [00 · Basics](00%20Basics/Notes.md)

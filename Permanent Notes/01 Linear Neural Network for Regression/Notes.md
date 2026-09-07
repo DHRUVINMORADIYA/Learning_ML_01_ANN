@@ -1,4 +1,6 @@
-# Linear Neural Network for Regression
+# 01 · Linear Neural Network for Regression
+
+Builds on [00 · Basics](../00%20Basics/Notes.md).
 
 ## Summary
 
@@ -25,7 +27,7 @@ The above function can also be viewed geometrically, as vectors in n-dimensional
 
 ## Practice files
 
-Three implementations of the same linear regression, each one removing a layer of manual work.
+Three implementations of the same linear regression, each one removing a layer of manual work. See [levels of abstraction](../Index.md#levels-of-abstraction).
 
 ### [L1_From_Scratch.py](L1_From_Scratch.py)
 
