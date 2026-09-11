@@ -35,7 +35,7 @@ The above function can also be viewed geometrically, as vectors in n-dimensional
 
 Three implementations of the same linear regression, each one removing a layer of manual work. See [levels of abstraction](../Index.md#levels-of-abstraction).
 
-### [L1_From_Scratch.py](L1_From_Scratch.py)
+### [L1_From_Scratch.py](https://github.com/DHRUVINMORADIYA/Learning_ML_01_ANN/blob/main/permanent-notes/01-linear-neural-network-for-regression/L1_From_Scratch.py){:target="_blank"}
 
 A simple implementation without use of libraries, to build intuition around the inner logic.
 
@@ -46,10 +46,10 @@ Implemented concepts:
 3. Generalization and weight decay (L2 regularization)
 4. Forward pass, MSE, gradients, SGD update
 
-### [L2_PyTorch.py](L2_PyTorch.py)
+### [L2_PyTorch.py](https://github.com/DHRUVINMORADIYA/Learning_ML_01_ANN/blob/main/permanent-notes/01-linear-neural-network-for-regression/L2_PyTorch.py){:target="_blank"}
 
 One level up on abstraction, where we let PyTorch do the low-level math. Use of autograd was one of the most important parts at this level.
 
-### [L3_High_Level.py](L3_High_Level.py)
+### [L3_High_Level.py](https://github.com/DHRUVINMORADIYA/Learning_ML_01_ANN/blob/main/permanent-notes/01-linear-neural-network-for-regression/L3_High_Level.py){:target="_blank"}
 
 High-level code, and I assume that's what people should be using in real life. We use Keras or similar frameworks that take care of everything. We just give data and configure parameters.

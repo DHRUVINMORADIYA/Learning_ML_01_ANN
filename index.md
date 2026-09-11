@@ -4,7 +4,7 @@ layout: home
 nav_order: 1
 ---
 
-# Learning ML: ANN
+# Learning ML
 
 Public progress log for learning neural networks from first principles, working through the D2L book.
 
