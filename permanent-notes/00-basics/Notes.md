@@ -1,3 +1,9 @@
+---
+title: 00 Basics
+parent: Permanent Notes
+nav_order: 1
+---
+
 # 00 · Basics
 
 A plain list of what was covered before linear regression

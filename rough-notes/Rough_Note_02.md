@@ -1,3 +1,9 @@
+---
+title: Rough Note 02
+parent: Rough Notes
+nav_order: 2
+---
+
 Planning of maintenance of permanent notes
 
 sequence

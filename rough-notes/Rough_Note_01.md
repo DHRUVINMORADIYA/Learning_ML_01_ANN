@@ -1,3 +1,9 @@
+---
+title: Rough Note 01
+parent: Rough Notes
+nav_order: 1
+---
+
 ### Why do we need Artificial Neural Networks?
     
 In traditional setup, programs are developed based on rules. Devs receive a set of rules, they convert them into code and there - we have a software. Imagine developers paving way for input data to take it to the expected outcome.

@@ -1,6 +1,12 @@
+---
+title: 01 Linear Neural Network for Regression
+parent: Permanent Notes
+nav_order: 2
+---
+
 # 01 · Linear Neural Network for Regression
 
-Builds on [00 · Basics](../00%20Basics/Notes.md).
+Builds on [00 · Basics](../00-basics/Notes.md).
 
 ## Summary
 

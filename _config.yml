@@ -1,0 +1,17 @@
+title: "Learning ML: ANN"
+description: "Public progress log for learning neural networks from first principles (D2L book), permanent notes and rough notes."
+
+remote_theme: just-the-docs/just-the-docs
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+kramdown:
+  math_engine: mathjax
+
+nav_sort: case_insensitive

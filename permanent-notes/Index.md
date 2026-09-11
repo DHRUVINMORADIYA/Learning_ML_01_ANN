@@ -1,11 +1,17 @@
+---
+title: Permanent Notes
+nav_order: 2
+has_children: true
+---
+
 # Permanent Notes · Index
 
 ## Path
 
-1. **[00 · Basics](00%20Basics/Notes.md)**: from "why learn from data" to how a
+1. **[00 · Basics](00-basics/Notes.md)**: from "why learn from data" to how a
    network learns. The four components, neuron to network, loss, gradient descent,
    matrices, autograd, batching.
-2. **[01 · Linear Neural Network for Regression](01%20Linear%20Neural%20Network%20for%20Regression/Notes.md)**:
+2. **[01 · Linear Neural Network for Regression](01-linear-neural-network-for-regression/Notes.md)**:
    the first model end to end, built at three levels of abstraction; generalization
    and weight decay.
 
@@ -29,7 +35,7 @@ most hands-off. Each step hands one more responsibility to a library.
 4. **High level**: a framework (Keras, Lightning, fastai) runs everything,
    including the loop. Only data and parameters are configured.
 
-Cited by: [01 · Linear Neural Network for Regression](01%20Linear%20Neural%20Network%20for%20Regression/Notes.md)
+Cited by: [01 · Linear Neural Network for Regression](01-linear-neural-network-for-regression/Notes.md)
 
 ### Four components of a learning system
 
@@ -41,7 +47,7 @@ really about just one of them:
 3. **Objective (loss) function**: a single number for how wrong a prediction is.
 4. **Optimization algorithm**: the rule that updates the model's parameters.
 
-Cited by: [00 · Basics](00%20Basics/Notes.md)
+Cited by: [00 · Basics](00-basics/Notes.md)
 
 ### Feeding data: full-batch / stochastic / mini-batch
 
@@ -53,4 +59,4 @@ How many examples go into one parameter update, a precision vs cost trade-off.
 - **Mini-batch**: a handful per update; averages out noise, fits in memory. The
   default.
 
-Cited by: [00 · Basics](00%20Basics/Notes.md)
+Cited by: [00 · Basics](00-basics/Notes.md)
